@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Calculator</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript Bundle with Popper.js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+    integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
+  </script>
+  
+</head>
+<body>
+  <!--================================== Start time 10:50AM =============================================-->
+  <main class="container my-5">
+      <div class="row">
+        <div class="col-md-5 mx-auto p-4">
+          <div class="calculator card">
+            <button class="btn btn-secondary history" onclick="history()" title="History">H</button>
+            <div class="history-list bg-light" id="history-list" style="display: none;"></div>
+            <div class="calculator-screen bg-light z-depth-1" id="calculator-bord" style="text-align: left;font-size: 2rem;overflow-y: auto;"></div>
+                <input type="text" id="calculator-screen" class="calculator-screen bg-light z-depth-1" value="" autofocus />
+
+                <div class="calculator-keys">
+                  <button type="button" onclick='BtnClick("%")'
+                    class="operator btn btn-info">%</button>
+                  <button type="button" onclick="ClearScreen()" class="all-clear function btn btn-danger btn-sm"
+                    value="all-clear">AC</button>
+                  <button type="button" onclick="ClearChar()" class="all-clear function btn btn-danger btn-sm"
+                    value="all-clear">⌫</button>
+                  <button type="button" onclick='BtnClick("/")' class="operator btn btn-info">&divide;</button>
+                  
+                  
+                  <button type="button" onclick='BtnClick("1")'
+                    class="btn btn-light waves-effect">1</button>
+                  <button type="button" onclick='BtnClick("2")'
+                    class="btn btn-light waves-effect">2</button>
+                  <button type="button" onclick='BtnClick("3")'
+                    class="btn btn-light waves-effect">3</button>
+                  <button type="button" onclick='BtnClick("*")'
+                    class="operator btn btn-info" value="*">&times;</button>
+                  
+                  <button type="button" onclick='BtnClick("4")'
+                    class="btn btn-light waves-effect">4</button>
+                  <button type="button" onclick='BtnClick("5")'
+                    class="btn btn-light waves-effect">5</button>
+                  <button type="button" onclick='BtnClick("6")'
+                    class="btn btn-light waves-effect">6</button>
+                  <button type="button" onclick='BtnClick("-")'
+                    class="operator btn btn-info" value="-">-</button>
+                  
+                  <button type="button" onclick='BtnClick("7")'
+                    class="btn btn-light waves-effect">7</button>
+                  <button type="button" onclick='BtnClick("8")'
+                    class="btn btn-light waves-effect">8</button>
+                  <button type="button" onclick='BtnClick("9")'
+                    class="btn btn-light waves-effect">9</button>
+                  <button type="button" onclick='BtnClick("+")'
+                    class="operator btn btn-info" value="+">+</button>
+                  
+                  
+                  <button type="button" onclick='ChangeValue()' class="decimal function btn btn-secondary">+/-</button>
+                  <button type="button" onclick='BtnClick("0")'
+                    class="btn btn-light waves-effect">0</button>
+                  
+                  <button type="button" onclick='BtnClick(".")' class="decimal function btn btn-secondary">.</button>
+                  <button type="button" onclick='result()' class="operator btn btn-default btn-secondary">=</button>
+                                  
+
+                </div>
+              </div>
+        </div>
+      </div> 
+  </main>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
